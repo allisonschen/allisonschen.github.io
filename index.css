@@ -2,3 +2,7 @@ body {
   margin-top: 100px;
   text-align: center; 
 }
+
+.headImage {
+  width: 200px;
+}
