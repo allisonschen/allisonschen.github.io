@@ -4,12 +4,12 @@ myApp.config(function($routeProvider) {
     $routeProvider
 
         .when('/', {
-            templateUrl : './index.html',
-            controller : 'homeController'
+            templateUrl : '/pages/home.html',
+            controller : 'homeController as homeVm'
         })
 
         .when('/about', {
-            templateUrl : 'pages/about.html',
+            templateUrl : '/pages/about.html',
             controller : 'aboutController'
         });
 });
