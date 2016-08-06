@@ -5,11 +5,17 @@ myApp.config(function($routeProvider) {
 
         .when('/', {
             templateUrl : '/pages/home.html',
-            controller : 'homeController as homeVm'
+            controller : 'homeController',
+	    controllerAs: 'homeVm'
         })
 
         .when('/about', {
             templateUrl : '/pages/about.html',
             controller : 'aboutController'
-        });
+        })
+	.otherwise({
+	  templateUrl: 'pages/home.html',
+	  controller: 'homeController',
+	  controllerAs: 'homeVm'
+	});
 });
