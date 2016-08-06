@@ -7,7 +7,7 @@
                 vm.message = 'working';
                 console.log("working");
 
-                vm.changeView() = function() {
+                vm.changeView = function() {
                         $location.path("/about");
                 }
 
