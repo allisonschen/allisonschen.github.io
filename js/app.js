@@ -1,6 +1,6 @@
 (function (angular) {
     var myApp = angular.module('myApp', ['ngRoute']);
-
+    console.log("helvlo");
     myApp.config(function ($routeProvider) {
         $routeProvider
 
