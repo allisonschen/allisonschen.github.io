@@ -12,7 +12,8 @@
 
             .when('/about', {
                 templateUrl: '/pages/about.html',
-                controller: 'aboutController'
+                controller: 'aboutController',
+                controllerAs: 'aboutVm'
             })
             .otherwise({
                 templateUrl: 'pages/home.html',
