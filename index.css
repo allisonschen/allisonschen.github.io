@@ -3,6 +3,7 @@ body {
   text-align: center; 
 }
 
-.headImage {
-  width: 200px;
+.headerImage {
+  max-width: 200px;
+  margin: 0 auto;
 }
