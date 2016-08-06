@@ -1,10 +1,10 @@
-var myApp = angular.module('myApp', []);
+var myApp = angular.module('myApp', ['ngRoute']);
 
 myApp.config(function($routeProvider) {
     $routeProvider
 
         .when('/', {
-            templateUrl : 'pages/index.html',
+            templateUrl : './index.html',
             controller : 'homeController'
         })
 
