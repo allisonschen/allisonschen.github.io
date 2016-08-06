@@ -8,6 +8,7 @@
                 console.log("working");
 
                 vm.changeView = function() {
+                        console.log("clicked");
                         $location.path("/about");
                 }
 
