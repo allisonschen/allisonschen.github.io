@@ -1,5 +1,6 @@
 #allyPortrait {
     margin-left: 240px;
+    margin-right: 120px;
     width: 275px;
     height: 275px;
     min-width: 275px;
@@ -9,7 +10,6 @@
 
 .firstRow {
     margin-top: 75px;
-    position: relative;
 }
 
 #img {
@@ -21,6 +21,5 @@
     height: 275px;
     margin-right: 100px;
     position: absolute;
-    left: 60px;
 
 }
