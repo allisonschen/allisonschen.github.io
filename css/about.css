@@ -1,15 +1,23 @@
 #text {
-    float: right;
     width: 400px;
+    height: 275px;
     margin-right: 100px;
+    position: absolute;
+    top: 50%;
+    left: 75%;
 
 }
 
 #allyPortrait {
-    float: left;
     margin-left: 100px;
+    width: 275px;
+    height: 275px;
+    min-width: 275px;
+    padding-right: 80px;
+    border-right: 2px solid black;
 }
 
 .firstRow {
     margin-top: 75px;
+    position: relative;
 }
