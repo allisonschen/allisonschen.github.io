@@ -1,7 +1,7 @@
 (function (angular) {
 
     var myApp = angular.module('myApp');
-    myApp.controller('aboutController', function ($scope, $location) {
+    myApp.controller('mainController', function ($scope, $location) {
         var vm = this;
         vm.message = "hello";
         vm.aboutView = function () {
