@@ -7,3 +7,11 @@ body {
   max-width: 200px;
   margin: 0 auto;
 }
+
+#changeRow {
+  text-align: center;
+}
+
+.changeRowElem {
+    width: 200px;
+}
