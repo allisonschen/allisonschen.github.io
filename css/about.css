@@ -1,14 +1,14 @@
 #text {
     width: 400px;
     height: 275px;
-    margin-right: 240px;
+    margin-right: 100px;
     position: absolute;
-    left: 120px;
+    left: 60px;
 
 }
 
 #allyPortrait {
-    margin-left: 100px;
+    margin-left: 240px;
     width: 275px;
     height: 275px;
     min-width: 275px;
