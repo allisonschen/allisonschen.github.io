@@ -1,6 +1,9 @@
 body {
   background-color: #fffceb;
-  text-align: center; 
+}
+
+#headerDiv {
+  text-align: center;
 }
 
 #headerImage {
