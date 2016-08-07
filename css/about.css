@@ -1,7 +1,15 @@
 #text {
     float: right;
+    width: 400px;
+    margin-right: 100px;
+
 }
 
 #allyPortrait {
     float: left;
+    margin-left: 100px;
+}
+
+.firstRow {
+    margin-top: 75px;
 }
