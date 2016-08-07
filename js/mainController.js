@@ -1,16 +1,16 @@
-(function(angular) {
+(function (angular) {
 
     var myApp = angular.module('myApp');
-    myApp.controller('mainController', function($scope, $location) {
+    myApp.controller('mainController', function ($scope, $location) {
         var vm = this;
-        vm.aboutView = function() {
+        vm.aboutView = function () {
             $location.path("/about");
         }
 
-        vm.homeView = function() {
+        vm.homeView = function () {
             $location.path("/");
         }
 
     });
 
-});
+})(angular);
