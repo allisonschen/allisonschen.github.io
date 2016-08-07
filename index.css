@@ -17,4 +17,5 @@ body {
     display: inline-block;
     font-family: Arvo;
     letter-spacing: 1px;
+    min-width: 200px;
 }
