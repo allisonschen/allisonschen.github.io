@@ -1,15 +1,15 @@
 (function (angular) {
-    var myApp = angular.module('myApp', ['ngRoute']);
+    var myApp = angular.module('myApp', ['ui.bootstrap','ngRoute']);
     myApp.config(function ($routeProvider) {
         $routeProvider
             .when('/', {
-                templateUrl: '/pages/home.html',
+                templateUrl: 'pages/home.html',
                 controller: 'homeController',
                 controllerAs: 'homeVm'
             })
 
             .when('/about', {
-                templateUrl: '/pages/about.html',
+                templateUrl: 'pages/about.html',
                 controller: 'aboutController',
                 controllerAs: 'aboutVm'
             })

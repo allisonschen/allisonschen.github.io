@@ -1,3 +1,17 @@
 <div>
     {{homeVm.message}}
 </div>
+<div>
+  <pre>{{artistSearch}}</pre>
+  <input type="text" ng-model="artistSearch" placeholder="type artist to search" 
+  uib-typeahead="artist for artist in homeVm.search($viewValue) |  limitTo:6" typeahead-focus-first="true">
+</div>
+<div>
+<ul>
+  <li ng-repeat="artist in homeVm.artists">
+    lol
+    {{artist}}
+  </li>
+</ul>
+</div>
+
