@@ -12,7 +12,7 @@
     $http.get('https://accounts.spotify.com/authorize', {
       params: {
 	client_id: '4543fb54a0694c1db55804cb18276c64',
-	response_type: 'code',
+	response_type: 'token',
 	redirect_uri: 'https://allisonschen.github.io/#/',
       }
     }).then(function(response){
