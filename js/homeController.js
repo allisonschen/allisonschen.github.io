@@ -7,13 +7,18 @@
     vm.message = 'working';
     console.log("working");
     $scope.artists=['lol','lolol','trololol','haha'];		
-    $http.get('https://api.spotify.com/v1/search?q=logic&type=artist', {
-      }).success(function(data) {
-	console.log(data.artists.items);
-      }).error(function(response) {
-	console.log(response);
-      });
     vm.results = [];
+    vm.token = [];
+    $http.get('https://accounts.spotify.com/authorize', {
+      params: {
+	client_id: '4543fb54a0694c1db55804cb18276c64',
+	response_type: 'code',
+	redirect_uri: 'https://allisonschen.github.io/#/',
+      }
+    }).then(function(response){
+      console.log(response);
+      console.log('hello bois');
+    });
     vm.search = function(val)  {
       vm.results = [];
       return $http.get('https://api.spotify.com/v1/search', {
