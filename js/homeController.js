@@ -13,7 +13,9 @@
       }).error(function(response) {
 	console.log(response);
       });
+    vm.results = [];
     vm.search = function(val)  {
+      vm.results = [];
       return $http.get('https://api.spotify.com/v1/search', {
 	params: {
 	  q: val,
@@ -22,6 +24,7 @@
       }).then(function(response){
 	console.log(response.data.artists.items);
 	return response.data.artists.items.map(function(item){
+	  vm.results.push(item.name);
 	  return item.name;
 	});
       });
