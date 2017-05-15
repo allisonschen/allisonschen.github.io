@@ -1,6 +1,6 @@
 (function (angular) {
     var myApp = angular.module('myApp', ['ui.bootstrap','ngRoute']);
-    myApp.config(function ($routeProvider) {
+    myApp.config(function ($httpProvider,$routeProvider) {
         $routeProvider
             .when('/', {
                 templateUrl: 'pages/home.html',
@@ -18,6 +18,7 @@
                 controller: 'homeController',
                 controllerAs: 'homeVm'
             });
+	$httpProvider.defaults.withCredentials = true;
     });
 
 })(angular);
