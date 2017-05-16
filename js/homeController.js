@@ -16,7 +16,10 @@
 	redirect_uri: 'https://allisonschen.github.io/#/',
       },
       headers: {
+	"Access-Control-Allow-Headers" : "Content-Type"
+	"Access-Control-Allow-Methods" : "GET"
 	"Access-Control-Allow-Origin" : "*"
+
       }
     }).then(function(response){
       console.log("wtf");
