@@ -18,7 +18,6 @@
       controller: 'homeController',
       controllerAs: 'homeVm'
     });
-    $httpProvider.defaults.withCredentials = true;
   });
 
 })(angular);

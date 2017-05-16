@@ -14,6 +14,9 @@
 	client_id: '4543fb54a0694c1db55804cb18276c64',
 	response_type: 'code',
 	redirect_uri: 'https://allisonschen.github.io/#/',
+      },
+      headers: {
+	"Access-Control-Allow-Origin" : "*"
       }
     }).then(function(response){
       console.log("wtf");
