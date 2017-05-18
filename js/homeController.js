@@ -18,8 +18,8 @@
       headers: {
 	"Access-Control-Allow-Headers" : "Origin,Content-Type,Authorization",
 	"Access-Control-Allow-Methods" : "GET",
-	"Access-Control-Allow-Origin" : "*"
-
+	"Access-Control-Allow-Origin" : "*",
+	"Access-Control-Allow-Credentials" : "true"
       }
     }).then(function(response){
       console.log("wtf");

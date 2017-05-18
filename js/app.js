@@ -19,5 +19,6 @@
       controllerAs: 'homeVm'
     });
   });
-
+  $httpProvider.defaults.useXDomain = true;
+  
 })(angular);
