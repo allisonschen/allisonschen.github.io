@@ -5,7 +5,8 @@
     .when('/', {
       templateUrl: 'pages/home.html',
       controller: 'homeController',
-      controllerAs: 'homeVm'
+      controllerAs: 'homeVm',
+      css: 'css/home.css'
     })
 
     .when('/about', {
@@ -16,7 +17,8 @@
     .otherwise({
       templateUrl: 'pages/home.html',
       controller: 'homeController',
-      controllerAs: 'homeVm'
+      controllerAs: 'homeVm',
+      css: 'css/home.css'
     });
     $httpProvider.defaults.useXDomain = true;
   });
