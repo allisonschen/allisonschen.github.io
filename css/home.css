@@ -1,3 +1,8 @@
 .ngview > div, .ngview > span {
   text-align:center;
 }
+
+#jukebox {
+  margin-top: 20px;
+}
+
