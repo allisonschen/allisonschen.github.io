@@ -1,5 +1,5 @@
 (function (angular) {
-  var myApp = angular.module('myApp', ['ui.bootstrap','ngRoute']);
+  var myApp = angular.module('myApp', ['ngMaterial','ui.bootstrap','ngRoute']);
   myApp.config(function ($httpProvider,$routeProvider) {
     $routeProvider
     .when('/', {
