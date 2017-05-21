@@ -16,7 +16,7 @@
 	redirect_uri: 'https://allisonschen.github.io/#/',
       },
       headers: {
-	"Access-Control-Allow-Headers" : "Origin,Content-Type,Authorization",
+	"Access-Control-Allow-Headers" : "Origin Content-Type Authorization",
 	"Access-Control-Allow-Methods" : "GET",
 	"Access-Control-Allow-Origin" : "https://iworkwithmonkeys.com allisonschen.github.io/",
 	"Access-Control-Allow-Credentials" : "true"
