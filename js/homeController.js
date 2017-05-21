@@ -16,7 +16,7 @@
 	'redirect_uri': 'iworkwithmonkeys.com',
       },
       headers: {
-	'Access-Control-Allow-Origin":'*'
+	'Access-Control-Allow-Origin':'*'
       }
     }).then(function(response){
       console.log("wtf");
