@@ -15,12 +15,6 @@
 	'response_type': 'token',
 	'redirect_uri': 'iworkwithmonkeys.com',
       },
-      headers: {
-	"Access-Control-Allow-Headers": "Origin,Content-Type,Authorization",
-	"Access-Control-Allow-Methods": "GET",
-	"Access-Control-Allow-Origin" : "*",
-	"Access-Control-Allow-Credentials" : "true"
-      }
     }).then(function(response){
       console.log("wtf");
       console.log(response);
