@@ -18,11 +18,11 @@
       headers: {
 	'Access-Control-Allow-Origin':'*'
       }
-    }).then(function(response){
+    }).success(function(response){
       console.log("wtf");
       console.log(response);
       console.log('hello bois');
-    }).error(function(res) {
+    }).error(function(response) {
       console.log(res);
     });
     vm.search = function(val)  {
