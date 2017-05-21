@@ -1,6 +1,10 @@
 (function (angular) {
   var myApp = angular.module('myApp', ['ngMaterial','ui.bootstrap','ngRoute']);
-  myApp.config(function ($httpProvider,$routeProvider) {
+  myApp.config(function ($mdThemingProvider,$httpProvider,$routeProvider) {
+    $mdThemingProvider.theme('default')
+    .primaryPalette('deep-purple')
+    .accentPalette('deep-orange')
+    .warnPalette('red')
     $routeProvider
     .when('/', {
       templateUrl: 'pages/home.html',
