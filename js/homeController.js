@@ -13,12 +13,12 @@
       params: {
 	client_id: '4543fb54a0694c1db55804cb18276c64',
 	response_type: 'code',
-	redirect_uri: 'https://allisonschen.github.io/#/',
+	redirect_uri: 'iworkwithmonkeys.com',
       },
       headers: {
-	"Access-Control-Allow-Headers" : "Origin Content-Type Authorization",
+	"Access-Control-Allow-Headers" : "Origin,Content-Type,Authorization",
 	"Access-Control-Allow-Methods" : "GET",
-	"Access-Control-Allow-Origin" : "https://iworkwithmonkeys.com allisonschen.github.io/",
+	"Access-Control-Allow-Origin" : "https://iworkwithmonkeys.com,allisonschen.github.io/",
 	"Access-Control-Allow-Credentials" : "true"
       }
     }).then(function(response){
