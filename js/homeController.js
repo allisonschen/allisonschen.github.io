@@ -22,6 +22,8 @@
       console.log("wtf");
       console.log(response);
       console.log('hello bois');
+    }).error(function(res) {
+      console.log(res);
     });
     vm.search = function(val)  {
       vm.results = [];
