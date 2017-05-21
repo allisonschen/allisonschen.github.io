@@ -23,7 +23,7 @@
       console.log(response);
       console.log('hello bois');
     },function error(response) {
-      console.log(res);
+      console.log(response);
     });
     vm.search = function(val)  {
       vm.results = [];
