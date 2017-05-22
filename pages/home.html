@@ -9,8 +9,8 @@
 </div>
 <div>
   <md-content width="20%" layout="column" layout-padding class="mdcontent">
-    <h5 style="margin:10px;">{{attr.name}}</h5>
     <md-slider-container flex ng-repeat="attr in homeVm.attrs">
+      <h5 style="margin:10px;">{{attr.name}}</h5>
       <md-slider ng-model="attr.val" class="md-primary" aria-label="lmao" md-range flex min="0" max = "100"></md-slider>
       <span>{{attr.val}}</span>
     </md-slider-container>
