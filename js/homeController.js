@@ -4,6 +4,7 @@
   myApp.controller('homeController', function ($scope, $location,$http) {
     console.log("lol");
     var vm = this;
+    vm.dance = 0.0;
     vm.message = 'working';
     console.log("working");
     $scope.artists=['lol','lolol','trololol','haha'];		
