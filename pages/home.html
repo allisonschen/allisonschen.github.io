@@ -8,7 +8,7 @@
 					     uib-typeahead="artist for artist in homeVm.search($viewValue) |  limitTo:6" typeahead-focus-first="true">
 </div>
 <div>
-  <md-content layout="column" layout-padding class="mdcontent">
+  <md-content width="20%" layout="column" layout-padding class="mdcontent">
     <md-slider-container flex ng-repeat="attr in homeVm.attrs">
       <md-slider ng-model="attr.val" class="md-primary" aria-label="lmao" md-range flex min="0" max = "100"></md-slider>
       <span>{{attr.val}}</span>
