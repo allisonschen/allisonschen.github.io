@@ -2,7 +2,7 @@
   var myApp = angular.module('myApp', ['ngMaterial','ui.bootstrap','ngRoute']);
   myApp.config(function ($mdThemingProvider,$httpProvider,$routeProvider) {
     $mdThemingProvider.theme('default')
-    .primaryPalette('deep-purple')
+    .primaryPalette('light-blue')
     .accentPalette('deep-orange')
     .warnPalette('red')
     $routeProvider
