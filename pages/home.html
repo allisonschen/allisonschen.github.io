@@ -10,7 +10,8 @@
 <div>
   <md-content class="mdcontent">
     <md-slider-container>
-      <md-slider md-primary aria-label="lmao" md-vertical md-range flex min="0" max = "100"></md-slider>
+      <md-slider ng-model="homeVm.dance" class="md-primary" aria-label="lmao" md-vertical md-range flex min="0" max = "100"></md-slider>
+      <span>{{homeVm.dance}}</span>
     </md-slider-container>
     <h5 style="margin:10px;">Danceability</h5>
   </md-content>
