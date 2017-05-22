@@ -4,6 +4,8 @@
   myApp.controller('homeController', function ($scope, $location,$http) {
     console.log("lol");
     var vm = this;
+    vm.attrs = ["danceability","acousticness","instrumentalness","liveness"
+      ,"loudness","energy","popularity","speechiness","valence"];
     vm.dance = 0.0;
     vm.message = 'working';
     console.log("working");

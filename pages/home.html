@@ -8,12 +8,12 @@
 					     uib-typeahead="artist for artist in homeVm.search($viewValue) |  limitTo:6" typeahead-focus-first="true">
 </div>
 <div>
-  <md-content class="mdcontent">
-    <md-slider-container>
+  <md-content layout="row" layout-padding class="mdcontent">
+    <md-slider-container flex ng-repeat="attr in homeVm.attrs">
       <md-slider ng-model="homeVm.dance" class="md-primary" aria-label="lmao" md-vertical md-range flex min="0" max = "100"></md-slider>
       <span>{{homeVm.dance}}</span>
     </md-slider-container>
-    <h5 style="margin:10px;">Danceability</h5>
+    <h5 style="margin:10px;">{{attr}}</h5>
   </md-content>
 </div>
 <!--<ul>
