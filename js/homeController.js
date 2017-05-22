@@ -4,8 +4,34 @@
   myApp.controller('homeController', function ($scope, $location,$http) {
     console.log("lol");
     var vm = this;
-    vm.attrs = ["danceability","acousticness","instrumentalness","liveness"
-      ,"loudness","energy","popularity","speechiness","valence"];
+    vm.attrs = [{
+      name: "danceability",
+      val: 0.0
+    },{
+      name : "acousticness",
+      val: 0.0
+    },{
+      name : "instrumentalness",
+      val: 0
+    },{
+      name : "liveness",
+      val : 0
+    },{
+      name: "loudness",
+      val : 0,
+    },{
+      name : "energy",
+      val: 0 
+    },{ 
+      name : "popularity",
+      val : 0
+    },{
+      name : "speechiness",
+      val : 0 
+    },{
+      name :"valence",
+       val : 0
+    }];
     vm.dance = 0.0;
     vm.message = 'working';
     console.log("working");
