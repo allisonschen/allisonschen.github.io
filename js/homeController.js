@@ -56,16 +56,14 @@
     });
     vm.search = function(val)  {
       vm.results = [];
-      return $http.get('https://api.spotify.com/v1/search', {
+      $http.get('https://api.spotify.com/v1/search', {
 	params: {
 	  q: val,
 	  type: 'artist'
 	}
       }).then(function(response){
-	console.log(response.data.artists.items);
-	return response.data.artists.items.map(function(item){
+	response.data.artists.items.map(function(item){
 	  vm.results.push(item.name);
-	  return item.name;
 	});
       });
     };
