@@ -57,7 +57,7 @@
     vm.search = function(val)  {
       console.log(val);
       vm.results = [];
-      $http.get('https://api.spotify.com/v1/search', {
+      return $http.get('https://api.spotify.com/v1/search', {
 	params: {
 	  q: val,
 	  type: 'artist'
@@ -67,10 +67,9 @@
 	angular.forEach(response.data.artists.items, function(item) {
 	  vm.results.push(item);
 	});
+	return vm.results;
       });
-      console.log(vm.results);
     };
-    console.log($scope.artists[2]);
     vm.changeView = function() {
       console.log("clicked");
       $location.path("/about");
