@@ -70,6 +70,7 @@
 	return vm.results;
       });
     };
+    console.log(vm.search("lol"));
     vm.changeView = function() {
       console.log("clicked");
       $location.path("/about");
