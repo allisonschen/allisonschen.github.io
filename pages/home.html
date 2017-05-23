@@ -3,8 +3,7 @@
   {{homeVm.message}}
 </div>
 <div>
-  <span>{{artistSearch}}</span>
-  <input type="text" ng-change="homeVm.search($viewValue)" ng-model="artistSearch" placeholder="type artist to search" 
+  <input type="text" ng-change="homeVm.search(homeVm.artistSearch)" ng-model="homeVm.artistSearch" placeholder="type artist to search" 
 					     uib-typeahead="artist for artist in  homeVm.results |  limitTo:6" typeahead-focus-first="true">
 </div>
 <div>

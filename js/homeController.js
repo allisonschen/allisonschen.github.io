@@ -38,6 +38,7 @@
     $scope.artists=['lol','lolol','trololol','haha'];		
     vm.results = [];
     vm.token = [];
+    vm.artistSearch = "";
     $http.get('https://accounts.spotify.com/authorize', {
       params: {
 	'client_id': '4543fb54a0694c1db55804cb18276c64',
@@ -55,6 +56,7 @@
       console.log(response);
     });
     vm.search = function(val)  {
+      console.log(val);
       vm.results = [];
       $http.get('https://api.spotify.com/v1/search', {
 	params: {
@@ -66,6 +68,7 @@
 	  vm.results.push(item.name);
 	});
       });
+      console.log(results);
     };
     console.log($scope.artists[2]);
     vm.changeView = function() {
