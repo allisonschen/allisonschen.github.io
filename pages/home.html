@@ -11,10 +11,8 @@
 
   <md-content layout="row" layout-padding class="mdcontent">
     <md-slider-container layout class="layout-column" ng-repeat="attr in homeVm.attrs">
-      <div flex="10" layout layout-align="center center">
-	<span class="md-body-1">{{attr.name}}</span>
-      </div>
       <md-slider md-vertical ng-model="attr.val" class="md-primary" aria-label="lmao" md-range flex min="0" max = "100"></md-slider>
+      <span class="md-body-1">{{attr.name}}</span>
       <span>{{attr.val}}</span>
     </md-slider-container>
   </md-content>
