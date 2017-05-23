@@ -64,8 +64,9 @@
 	  type: 'artist'
 	}
       }).then(function(response){
-	response.data.artists.items.map(function(item){
-	  vm.results.push(item.name);
+	console.log(response);
+	angular.forEach(response.data.artists, function(item) {
+	  vm.results.push(item);
 	});
       });
       console.log(vm.results);
