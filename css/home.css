@@ -11,3 +11,7 @@
   padding: 10px;
   background: transparent;
 }
+
+.md-track-container {
+  height: 5px;
+}
