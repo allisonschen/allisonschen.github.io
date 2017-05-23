@@ -36,7 +36,6 @@
     vm.message = 'working';
     console.log("working");
     $scope.artists=['lol','lolol','trololol','haha'];		
-    vm.results = [];
     vm.token = [];
     vm.artistSearch = "";
     $http.get('https://accounts.spotify.com/authorize', {
