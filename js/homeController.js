@@ -65,7 +65,7 @@
 	}
       }).then(function(response){
 	console.log(response);
-	angular.forEach(response.data.artists, function(item) {
+	angular.forEach(response.data.artists.items, function(item) {
 	  vm.results.push(item);
 	});
       });
