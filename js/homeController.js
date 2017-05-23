@@ -68,7 +68,7 @@
 	  vm.results.push(item.name);
 	});
       });
-      console.log(results);
+      console.log(vm.results);
     };
     console.log($scope.artists[2]);
     vm.changeView = function() {
