@@ -4,7 +4,7 @@
 </div>
 <div>
   <input type="text" ng-change="homeVm.search(homeVm.artistSearch)" ng-model="homeVm.artistSearch" placeholder="type artist to search" 
-					     uib-typeahead="artist for homeVm.artist.name in  homeVm.results |  limitTo:6" typeahead-focus-first="true">
+					     uib-typeahead="artist.name for artist in  homeVm.results |  limitTo:6" typeahead-focus-first="true">
 </div>
 <div>
 
