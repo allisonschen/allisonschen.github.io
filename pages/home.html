@@ -1,12 +1,13 @@
 <link rel="stylesheet" type="text/css" href="./css/home.css">
 <script type="text/ng-template" id="dropTemplate.html">
-  
+<a>
+<img class="artistImg" src={{match.model.img}}>
+  <span ng-bind-html="match.label | uibTypeaheadHighlight:query"></span>
+</a>
 </script>
-<div>{{homeVm.artistSearch | json}}</div>
-<div>{{homeVm.artistSearch.t}}</div>
 <div>
-  <input type="text" ng-model="homeVm.artistSearch" placeholder="type artist to search" 
-						    uib-typeahead="artist as artist.name for artist in homeVm.search($viewValue)" typeahead-focus-first="true">
+  <input type="text" ng-model="homeVm.artistSearch" placeholder="type artist to search" typeahead-template-url="dropTemplate.html" 
+											uib-typeahead="artist as artist.name for artist in homeVm.search($viewValue)" typeahead-focus-first="true">
 
 </div>
 <div>

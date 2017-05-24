@@ -68,15 +68,13 @@
 	}
 	response.data.artists.items.sort(compare);
 	return limitToFilter(angular.forEach(response.data.artists.items, function(item) {
-	  t = {"pic": item.images[item.images.length]}
-	  item.push(t);
+	  i = item.images[Object.keys(item.images)[item.images.length-1]];
+	  if (i != null) {item.img=i.url};
 	  return vm.results.push(item);
 	})
 	,5);
       });
     };
-    var obj = (vm.search("lol"));
-    console.log(obj);
     vm.changeView = function() {
       console.log("clicked");
       $location.path("/about");
