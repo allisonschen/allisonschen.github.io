@@ -1,7 +1,7 @@
 (function (angular) {
 
   var myApp = angular.module('myApp');
-  myApp.controller('homeController', function ($scope, $location,$http) {
+  myApp.controller('homeController', function (limitToFilter, $scope, $location,$http) {
     var vm = this;
     vm.attrs = [{
       "name": "danceability",
@@ -62,7 +62,7 @@
 	}
       }).then(function(response){
 	console.log(response);
-	return $filter('limitTo')(angular.forEach(response.data.artists.items, function(item) {
+	return limitToFilter(angular.forEach(response.data.artists.items, function(item) {
 	  return vm.results.push(item);
 	})
 	,5);
