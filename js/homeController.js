@@ -68,6 +68,7 @@
       });
     };
     var obj = (vm.search("lol"));
+    console.log(obj);
     vm.changeView = function() {
       console.log("clicked");
       $location.path("/about");
