@@ -62,6 +62,10 @@
 	}
       }).then(function(response){
 	console.log(response);
+	function compare(a,b) {
+	  return b.popularity - a.popularity;
+	}
+	response.data.artists.items.sort(compare);
 	return limitToFilter(angular.forEach(response.data.artists.items, function(item) {
 	  return vm.results.push(item);
 	})
