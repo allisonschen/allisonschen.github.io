@@ -5,7 +5,7 @@
 <pre>Model: {{homeVm.artistSearch}}</pre>
 <div>
   <input type="text" ng-model="homeVm.artistSearch" placeholder="type artist to search" 
-  uib-typeahead="artist.name for artist in homeVm.search($viewValue) | limitTo:6" typeahead-focus-first="true">
+  uib-typeahead="select as artist.name for artist in homeVm.search($viewValue) | limitTo:6" typeahead-focus-first="true">
 
 </div>
 <div>
