@@ -68,6 +68,8 @@
 	}
 	response.data.artists.items.sort(compare);
 	return limitToFilter(angular.forEach(response.data.artists.items, function(item) {
+	  t = {"pic": item.images[item.images.length]}
+	  item.push(t);
 	  return vm.results.push(item);
 	})
 	,5);
