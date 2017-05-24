@@ -69,7 +69,6 @@
     };
     var obj = (vm.search("lol"));
     console.log(obj);
-    console.log(obj.value);
     vm.changeView = function() {
       console.log("clicked");
       $location.path("/about");
