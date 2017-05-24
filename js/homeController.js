@@ -69,7 +69,7 @@
 	response.data.artists.items.sort(compare);
 	return limitToFilter(angular.forEach(response.data.artists.items, function(item) {
 	  i = item.images[Object.keys(item.images)[item.images.length-1]];
-	  if (i != null) {item.img=i.url};
+	  i != null ?  item.img=i.url  :  item.img="./images/DefaultArtist.png";
 	  return vm.results.push(item);
 	})
 	,5);
