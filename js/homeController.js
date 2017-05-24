@@ -62,11 +62,9 @@
 	}
       }).then(function(response){
 	console.log(response);
-	angular.forEach(response.data.artists.items, function(item) {
-	  vm.results.push(item);
+	return angular.forEach(response.data.artists.items, function(item) {
+	  return vm.results.push(item);
 	});
-	console.log(vm.results);
-	return vm.results;
       });
     };
     var obj = (vm.search("lol"));
