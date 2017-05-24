@@ -2,7 +2,6 @@
 
   var myApp = angular.module('myApp');
   myApp.controller('homeController', function ($scope, $location,$http) {
-    console.log("lol");
     var vm = this;
     vm.attrs = [{
       "name": "danceability",
@@ -34,7 +33,6 @@
     }];
     vm.dance = 0.0;
     vm.message = 'working';
-    console.log("working");
     $scope.artists=['lol','lolol','trololol','haha'];		
     vm.token = [];
     vm.artistSearch = "";
@@ -71,7 +69,9 @@
 	return vm.results;
       });
     };
-    console.log(vm.search("lol"));
+    var obj = (vm.search("lol"));
+    console.log(obj);
+    console.log(obj.value);
     vm.changeView = function() {
       console.log("clicked");
       $location.path("/about");
