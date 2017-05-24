@@ -7031,7 +7031,7 @@ angular.module('ui.bootstrap.typeahead', ['ui.bootstrap.debounce', 'ui.bootstrap
     // after digest loop is popup in right position
     function recalculatePosition() {
       scope.position = appendToBody ? $position.offset(element) : $position.position(element);
-      scope.position.top += element.prop('offsetHeight');
+      scope.position.top += element.prop('offsetHeight')-document.body.scrollTop;;
     }
 
     //we need to propagate user's query so we can higlight matches
