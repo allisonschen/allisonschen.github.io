@@ -62,7 +62,7 @@
 	}
       }).then(function(response){
 	console.log(response);
-	return limitToFilter(angular.forEach(response.data.artists.items, function(item) {
+	return $filter('limitTo')(angular.forEach(response.data.artists.items, function(item) {
 	  return vm.results.push(item);
 	})
 	,5);
