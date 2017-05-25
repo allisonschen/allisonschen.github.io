@@ -3,6 +3,7 @@
   var myApp = angular.module('myApp');
   myApp.controller('homeController', function (limitToFilter, $scope, $location,$http) {
     var vm = this;
+    vm.imgs = [];
     vm.attrs = [{
       "name": "danceability",
       "val": 0.0
@@ -36,6 +37,9 @@
     $scope.artists=['lol','lolol','trololol','haha'];		
     vm.token = [];
     vm.artistSearch = "";
+    vm.onSelect = function(i,m,l) {
+      vm.imgs.push(i.img);
+    }
     $http.get('https://accounts.spotify.com/authorize', {
       params: {
 	'client_id': '4543fb54a0694c1db55804cb18276c64',

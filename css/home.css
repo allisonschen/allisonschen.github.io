@@ -16,3 +16,7 @@ md-content {
   height: 40px;
   margin-left: -10px;
 }
+
+.tileImg {
+  border-radius: 50%;
+}

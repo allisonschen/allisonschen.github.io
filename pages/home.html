@@ -1,12 +1,12 @@
 <link rel="stylesheet" type="text/css" href="./css/home.css">
 <script type="text/ng-template" id="dropTemplate.html">
 <a>
-<img class="artistImg" src={{match.model.img}}>
+<img class="artistImg" ng-src={{match.model.img}}>
   <span ng-bind-html="match.label | uibTypeaheadHighlight:query"></span>
 </a>
 </script>
 <div>
-  <input type="text" ng-model="homeVm.artistSearch" placeholder="type artist to search" typeahead-template-url="dropTemplate.html" uib-typeahead="artist as artist.name for artist in homeVm.search($viewValue)" typeahead-focus-first="true">
+  <input type="text" ng-model="homeVm.artistSearch" placeholder="type artist to search" typeahead-template-url="dropTemplate.html" uib-typeahead="artist as artist.name for artist in homeVm.search($viewValue)" typeahead-focus-first="true" typeahead-on-select="homeVm.onSelect($item,$model,$label)">
 </div>
 <div>
   <md-content layout="row" layout-padding md-no-momentum>
@@ -21,15 +21,14 @@
   </md-content>
 </div>
 <div>
-  <md-content layout="row" md-no-momentum>
+  <md-content md-no-momentum>
     <md-grid-list md-cols="5" md-row-height="200px">
-      <md-grid-tile>
-	<img ng-src={{homeVm.artistSearch.img}}>
+      <md-grid-tile ng-repeat="img in homeVm.imgs">
+	<img class="tileImg" ng-src={{img}}>
       </md-grid-tile>
     </md-grid-list>
   </md-content>
 </div>
-
 <!--<ul>
   <li ng-repeat="artist in homeVm.results">
   lol
