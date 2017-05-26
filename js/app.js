@@ -1,5 +1,5 @@
 (function (angular) {
-  var myApp = angular.module('myApp', ['ngMaterial','ui.bootstrap','ngRoute']);
+  var myApp = angular.module('myApp', ['ngAnimate','ngMaterial','ui.bootstrap','ngRoute']);
   myApp.config(function ($mdThemingProvider,$httpProvider,$routeProvider) {
     $mdThemingProvider.theme('default')
     .primaryPalette('light-blue')

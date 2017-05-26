@@ -4,6 +4,10 @@
   myApp.controller('homeController', function (limitToFilter, $scope, $location,$http) {
     var vm = this;
     vm.imgs = [];
+    vm.removeSelection = function(val, i) {
+      console.log(val,i);
+      console.log("removing");
+    }
     vm.attrs = [{
       "name": "danceability",
       "val": 0.0
@@ -38,7 +42,7 @@
     vm.token = [];
     vm.artistSearch = "";
     vm.onSelect = function(i,m,l) {
-      vm.imgs.push(i.img);
+      vm.imgs.unshift(i.img);
     }
     $http.get('https://accounts.spotify.com/authorize', {
       params: {

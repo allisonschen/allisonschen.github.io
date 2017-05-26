@@ -1,4 +1,6 @@
 <link rel="stylesheet" type="text/css" href="./css/home.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" 
+      rel="stylesheet">
 <script type="text/ng-template" id="dropTemplate.html">
 <a>
 <img class="artistImg" ng-src={{match.model.img}}>
@@ -23,8 +25,12 @@
 <div>
   <md-content md-no-momentum>
     <md-grid-list md-cols="5" md-row-height="200px">
-      <md-grid-tile ng-repeat="img in homeVm.imgs">
-	<img class="tileImg" ng-src={{img}}>
+      <md-grid-tile class="animate-repeat" ng-repeat="img in homeVm.imgs track by $index">
+	<img class="animate-repeat tileImg" ng-src={{img}}>
+	<md-button class="md-icon-button" aria-label="Clear" 
+		ng-click="homeVm.imgs.splice($index,1)">
+	  <md-icon>clear</md-icon>
+	</md-button>
       </md-grid-tile>
     </md-grid-list>
   </md-content>
