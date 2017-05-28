@@ -52,3 +52,6 @@ md-content {
   bottom:90px;
   right: 40px;
 }
+
+.md-input {
+  padding-right : 2px!important;

@@ -2,10 +2,22 @@
 
     var myApp = angular.module('myApp');
     myApp.controller('aboutController', function ($scope, $location) {
-        console.log("lol");
         var vm = this;
-        vm.message = 'this is the about page';
-        console.log("working");
+	vm.people = [
+	  {
+	    img:"leadmonkey.jpg",
+	    info:"I run the monkeys"
+	  },{
+	    img:"alcuck.jpg",
+	    info:"I made jookbocks logo"
+	  },{
+	    img:"kchen.jpg",
+	    info:"I can't code"
+	  },{
+	    img:"wecock.jpg",
+	    info:"I literally have done nothing"
+	  }];
+
 
         vm.changeView = function () {
             $location.path("/");
