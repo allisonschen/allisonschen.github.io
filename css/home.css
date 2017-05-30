@@ -4,6 +4,7 @@
 
 #jukebox {
   margin-top: 20px;
+  border-radius: none!important;
 }
 
 md-content {

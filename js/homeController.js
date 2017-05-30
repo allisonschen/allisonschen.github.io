@@ -34,7 +34,7 @@
       "val" : 0 
     },{
       "name" :"valence",
-       "val" : 0
+      "val" : 0
     }];
     vm.dance = 0.0;
     vm.message = 'working';
@@ -56,8 +56,10 @@
     }).then(function(response){
       console.log("wtf");
       console.log(response);
+      console.log($location.hash());
       console.log('hello bois');
     },function error(response) {
+      console.log($location.hash());
       console.log(response);
     });
     vm.search = function(val)  {
@@ -81,14 +83,13 @@
 	  return vm.results.push(item);
 	})
 	,5);
+      },function error(response) {
+	console.log(response);
       });
-    };
+    }
     vm.changeView = function() {
       console.log("clicked");
       $location.path("/about");
     }
-
-
   });
-
 })(angular);

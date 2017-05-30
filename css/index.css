@@ -9,6 +9,7 @@ body {
 #headerImage {
   max-width: 200px;
   margin: 0 auto;
+  border-radius: 0!important;
 }
 
 #changeRow {
