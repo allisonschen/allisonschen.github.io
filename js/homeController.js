@@ -67,7 +67,8 @@
       console.log('user authenticated');
     },function error(response) {
       console.log($location.hash());
-      console.log($location.hash().split('/[&\=]/'));
+      console.log($location.hash().split('&')[0].split('=')[1]);
+      console.log($location.hash().split('/[&=]/'));
       console.log(response);
     });
     vm.search = function(val)  {
