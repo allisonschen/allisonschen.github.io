@@ -15,9 +15,9 @@
 <div>
   <md-content layout="row" layout-padding md-no-momentum>
     <md-slider-container flex  ng-repeat="attr in homeVm.attrs">
-      <md-slider md-vertical ng-model="attr.val" class="md-primary" aria-label="lmao" md-range min="0" max = "100">
+      <md-slider ng-disabled="homeVm.isDisabled" md-vertical ng-model="attr.val" class="md-primary" aria-label="lmao" md-range min="0" max = "100">
       </md-slider>
-      <span>{{attr.name}}</span>
+      <span ng-click="homeVm.isDisabled = !homeVm.isDisabled">{{attr.name}}</span>
       <md-input-container class="md-block">
 	<input type="number" step="any" aria-label="lmoo" name="attr.name" ng-model="attr.val"min=0 max=100;/>
       </md-input-container>

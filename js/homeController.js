@@ -5,6 +5,7 @@
     var vm = this;
     var accessToken = "";
     vm.userImg="";
+    vm.isDisabled = false;
     vm.finalj = {
         limit: 20,
         seed_artists: "",
