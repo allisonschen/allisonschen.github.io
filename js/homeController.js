@@ -8,7 +8,6 @@
     vm.finalj = {
 	attrs : ""
     }
-    vm.finalj.attrs=vm.attrs;
     vm.userName="";
     vm.imgs = [];
     if($location.hash()=="") {
@@ -52,8 +51,7 @@
       "name" :"valence",
       "val" : 0
     }];
-    vm.dance = 0.0;
-    vm.message = 'working';
+    vm.finalj.attrs=vm.attrs;
     $scope.artists=['lol','lolol','trololol','haha'];		
     vm.token = [];
     vm.artistSearch = "";
