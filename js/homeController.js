@@ -24,7 +24,7 @@
 	n = "target_" + item.name;
 	vm.finalj[n]=item.val;
       });
-      vm.finalj.delete(attrs);
+      delete vm.finalj.attrs;
       $http.get("https://api.spotify.com/v1/recommendations", {
 	headers: {
 	  Authorization: "Bearer " + accessToken
