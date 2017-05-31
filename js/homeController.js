@@ -28,7 +28,7 @@
       var auth = "Bearer " + accessToken;
       $http.get("https://api.spotify.com/v1/recommendations", {
 	headers: {
-	  Authorization: auth;
+	  Authorization: auth
 	},
 	params: vm.finalj
       }).then(function(response) {
