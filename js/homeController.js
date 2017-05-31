@@ -8,8 +8,6 @@
     vm.finalj = {
         limit: 20,
         seed_artists: "",
-	seed_genres: "",
-	seed_tracks: "",
 	attrs : ""
     }
     vm.userName="";
@@ -20,6 +18,7 @@
       accessToken = ($location.hash().split('&')[0].split('=')[1]);
     }
     vm.login = function() {
+      vm.finalj.seed_artists.slice(0,-1);
       angular.forEach(vm.attrs, function(item) {
 	n = "target_" + item.name;
 	vm.finalj[n]=item.val;
@@ -72,6 +71,7 @@
     vm.token = [];
     vm.artistSearch = "";
     vm.onSelect = function(i,m,l) {
+      vm.finalj.seed_artists += i.name + ",";
       vm.imgs.unshift(i.img);
       vm.artistSearch="";
     }
