@@ -1,9 +1,16 @@
 (function (angular) {
 
   var myApp = angular.module('myApp');
-  myApp.controller('homeController', function (limitToFilter, $scope, $location,$http) {
+  myApp.controller('homeController', function (limitToFilter, $scope, $location,$http,$window) {
     var vm = this;
+    var accessToken = "";
+    vm.userImg="";
+    vm.userName="";
     vm.imgs = [];
+    vm.login = function() {
+      console.log("login pressed");
+      $window.location.href = "https://accounts.spotify.com/authorize?client_id=4543fb54a0694c1db55804cb18276c64&redirect_uri=http:%2F%2Fiworkwithmonkeys.com&response_type=token";
+    }
     vm.removeSelection = function(val, i) {
       console.log(val,i);
       console.log("removing");
@@ -54,12 +61,13 @@
 	'Access-Control-Allow-Origin':'*'
       }
     }).then(function(response){
-      console.log("wtf");
       console.log(response);
       console.log($location.hash());
-      console.log('hello bois');
+      console.log($location.hash().split('/[&=]/')[2])
+      console.log('user authenticated');
     },function error(response) {
       console.log($location.hash());
+      console.log($location.hash().split('/[&=]/')[2])
       console.log(response);
     });
     vm.search = function(val)  {

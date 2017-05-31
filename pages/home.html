@@ -8,6 +8,7 @@
 </a>
 </script>
 <div>
+  <button ng-click="homeVm.login()">login!</button>
   <input type="text" ng-model="homeVm.artistSearch" placeholder="type artist to search" typeahead-template-url="dropTemplate.html" uib-typeahead="artist as artist.name for artist in homeVm.search($viewValue)" typeahead-focus-first="true" typeahead-on-select="homeVm.onSelect($item,$model,$label)">
 </div>
 <div>
