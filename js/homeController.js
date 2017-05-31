@@ -6,6 +6,10 @@
     var accessToken = "";
     vm.userImg="";
     vm.finalj = {
+        limit: 20,
+        seed_artists: "",
+	seed_genres: "",
+	seed_tracks: "",
 	attrs : ""
     }
     vm.userName="";
@@ -17,7 +21,17 @@
     }
     vm.login = function() {
       console.log("login pressed");
-      $window.location.href = "https://accounts.spotify.com/authorize?client_id=4543fb54a0694c1db55804cb18276c64&redirect_uri=http:%2F%2Fiworkwithmonkeys.com&response_type=token";
+      angular.forEach(vm.attrs, function(value,key) {
+	vm.finalj[value]=key;
+      });
+      $http.get("https://api.spotify.com/v1/recommendations", {
+	headers: {
+	  Authorization: "Bearer " + accessToken
+	},
+	params: vm.finalj
+      }).then(function(response) {
+	console.log(response);
+      });
     }
     vm.removeSelection = function(val, i) {
       console.log(val,i);
