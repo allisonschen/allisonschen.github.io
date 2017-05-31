@@ -4,6 +4,7 @@
   myApp.controller('homeController', function (limitToFilter, $scope, $location,$http,$window) {
     var vm = this;
     var accessToken = "";
+    vm.json = "hi"
     vm.userImg="";
     vm.userName="";
     vm.imgs = [];
