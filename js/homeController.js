@@ -72,7 +72,7 @@
     vm.search = function(val)  {
       console.log(val);
       vm.results = [];
-      var auth = "Basic " + accessToken;
+      var auth = "Bearer " + accessToken;
       return $http.get('https://api.spotify.com/v1/search', {
 	headers: {
 	  Authorization: auth
