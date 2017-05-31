@@ -71,7 +71,7 @@
     vm.token = [];
     vm.artistSearch = "";
     vm.onSelect = function(i,m,l) {
-      vm.finalj.seed_artists += i.name + ",";
+      vm.finalj.seed_artists += i.uri.split(":")[2] + ",";
       vm.imgs.unshift(i.img);
       vm.artistSearch="";
     }
