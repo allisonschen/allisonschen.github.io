@@ -21,8 +21,8 @@
     }
     vm.login = function() {
       console.log("login pressed");
-      angular.forEach(vm.attrs, function(value,key) {
-	vm.finalj[value]=key;
+      angular.forEach(vm.attrs, function(item) {
+	vm.finalj[item.name]=item.val;
       });
       $http.get("https://api.spotify.com/v1/recommendations", {
 	headers: {
