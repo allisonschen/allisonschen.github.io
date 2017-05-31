@@ -20,10 +20,11 @@
       accessToken = ($location.hash().split('&')[0].split('=')[1]);
     }
     vm.login = function() {
-      console.log("login pressed");
       angular.forEach(vm.attrs, function(item) {
-	vm.finalj[item.name]=item.val;
+	n = "target_" + item.name;
+	vm.finalj[n]=item.val;
       });
+      vm.finalj.delete(attrs);
       $http.get("https://api.spotify.com/v1/recommendations", {
 	headers: {
 	  Authorization: "Bearer " + accessToken
