@@ -7,6 +7,11 @@
     vm.userImg="";
     vm.userName="";
     vm.imgs = [];
+    if($location.hash()=="") {
+	$window.location.href = "https://accounts.spotify.com/authorize?client_id=4543fb54a0694c1db55804cb18276c64&redirect_uri=http:%2F%2Fiworkwithmonkeys.com&response_type=token";
+    } else {
+      accessToken = ($location.hash().split('&')[0].split('=')[1]);
+    }
     vm.login = function() {
       console.log("login pressed");
       $window.location.href = "https://accounts.spotify.com/authorize?client_id=4543fb54a0694c1db55804cb18276c64&redirect_uri=http:%2F%2Fiworkwithmonkeys.com&response_type=token";
@@ -67,7 +72,6 @@
       console.log($location.hash().split('/[&=]/')[2])
       console.log('user authenticated');
     },function error(response) {
-      accessToken = ($location.hash().split('&')[0].split('=')[1]);
       console.log(response);
     });
     vm.search = function(val)  {
@@ -103,5 +107,6 @@
       console.log("clicked");
       $location.path("/about");
     }
+
   });
 })(angular);
