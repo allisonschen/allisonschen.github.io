@@ -78,7 +78,7 @@
 	  Authorization: auth
 	},
 	params: {
-	  q: val,
+	  q: val+'*',
 	  type: 'artist',
 	  limit: '50'
 	}
