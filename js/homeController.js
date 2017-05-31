@@ -66,15 +66,17 @@
       console.log($location.hash().split('/[&=]/')[2])
       console.log('user authenticated');
     },function error(response) {
-      console.log($location.hash());
-      console.log($location.hash().split('&')[0].split('=')[1]);
-      console.log($location.hash().split('/[&=]+/'));
+      accessToken = ($location.hash().split('&')[0].split('=')[1]);
       console.log(response);
     });
     vm.search = function(val)  {
       console.log(val);
       vm.results = [];
+      var auth = "Basic " + accessToken;
       return $http.get('https://api.spotify.com/v1/search', {
+	headers: {
+	  Authorization: auth
+	},
 	params: {
 	  q: val,
 	  type: 'artist',
