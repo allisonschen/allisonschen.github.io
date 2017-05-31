@@ -4,8 +4,9 @@
   myApp.controller('homeController', function (limitToFilter, $scope, $location,$http,$window) {
     var vm = this;
     var accessToken = "";
-    vm.json = "hi"
     vm.userImg="";
+    vm.json = "";
+    vm.json.push(vm.attrs);
     vm.userName="";
     vm.imgs = [];
     if($location.hash()=="") {
@@ -108,6 +109,6 @@
       console.log("clicked");
       $location.path("/about");
     }
-
+    
   });
 })(angular);
