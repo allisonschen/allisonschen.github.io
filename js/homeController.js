@@ -50,6 +50,7 @@
     vm.artistSearch = "";
     vm.onSelect = function(i,m,l) {
       vm.imgs.unshift(i.img);
+      vm.artistSearch="";
     }
     $http.get('https://accounts.spotify.com/authorize', {
       params: {
