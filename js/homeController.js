@@ -5,8 +5,10 @@
     var vm = this;
     var accessToken = "";
     vm.userImg="";
-    vm.json = "";
-    vm.json.push(vm.attrs);
+    vm.finalj = {
+	attrs : ""
+    }
+    vm.finalj.attrs=vm.attrs;
     vm.userName="";
     vm.imgs = [];
     if($location.hash()=="") {
