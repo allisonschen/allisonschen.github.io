@@ -2,9 +2,14 @@
   text-align:center;
 }
 
-#jukebox {
-  margin-top: 20px;
-  border-radius: none!important;
+@font-face {
+  font-family: 'CircularStd Bold';
+  src: url('../fonts/CircularStd-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+#h1 {
+  font-family: 'CircularStd-Bold';
 }
 
 md-content {
