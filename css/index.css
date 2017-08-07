@@ -2,10 +2,13 @@ body {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e62284+0,e3af65+100 */
 }
 
+.ngview, .md-content {
+  background:#FFC591
+}
 #headerDiv {
   text-align: center;
   height: 300px;
-  border-bottom: 2px;
+  border-bottom: 2px solid;
   border-color: #9E7A5A;
   background: #e62284; /* Old browsers */
   background: -moz-linear-gradient(top,  #e62284 0%, #e3af65 93%); /* FF3.6-15 */
