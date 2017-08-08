@@ -19,12 +19,14 @@ body {
 
 }
 
-#headerImage {
-  max-width: 200px;
-  margin: 0 auto;
-  border-radius: 0!important;
+@font-face {
+    font-family:'CircularStd-Bold';
+    src: url('../fonts/CircularStd-Bold.ttf') format('truetype');
+    font-weight: bold;
 }
-
+h1 {
+  font-family:'CircularStd-Bold';
+}
 #changeRow {
   text-align: center;
 }
