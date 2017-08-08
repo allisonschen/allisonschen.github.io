@@ -2,7 +2,7 @@ body {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e62284+0,e3af65+100 */
 }
 
-.ngview, .md-content {
+.ngview, md-content {
   background:#FFC591
 }
 #headerDiv {
