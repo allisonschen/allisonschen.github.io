@@ -8,6 +8,10 @@
   font-weight: bold;
 }
 
+#controlPanel {
+  width:50%;
+}
+
 h1 {
   font-family: 'CircularStd-Bold';
 }
