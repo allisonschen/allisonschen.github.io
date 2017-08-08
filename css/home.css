@@ -9,7 +9,9 @@
 }
 
 #controlPanel {
+  background: #FFD3AC;
   width:50%;
+  height:200px;
 }
 
 h1 {
