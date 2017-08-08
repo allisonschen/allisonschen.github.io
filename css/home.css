@@ -1,5 +1,7 @@
 .ngview > div, .ngview > span {
   text-align:center;
+  padding-top:40px;
+  padding-left:40px;
 }
 
 @font-face {
@@ -10,7 +12,7 @@
 
 #controlPanel {
   background: #FFD3AC;
-  width:50%;
+  width:30%;
   height:200px;
 }
 
