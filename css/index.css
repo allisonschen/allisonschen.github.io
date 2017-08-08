@@ -6,6 +6,7 @@ body {
   background:#FFC591
 }
 #headerDiv {
+  color:white;
   text-align: center;
   height: 300px;
   border-bottom: 2px solid;
