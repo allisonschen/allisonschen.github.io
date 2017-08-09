@@ -5,6 +5,10 @@ body {
 .ngview, md-content {
   background:#FFC591
 }
+h1 {
+  font-size:70px;
+  margin-top: 120px;
+}
 #headerDiv {
   color:white;
   text-align: center;
