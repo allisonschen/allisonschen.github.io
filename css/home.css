@@ -14,7 +14,7 @@
 }
 #controlPanel {
   color:white;
-  background: rbga(255,211,172,.66);
+  background: #FFD3AC;
   width:30%;
 }
 #controlPanel > md-input-container {
