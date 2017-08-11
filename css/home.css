@@ -9,8 +9,11 @@
   font-weight: bold;
 }
 
+.searches {
+  color:white;
+}
 #controlPanel {
-  text-color:white;
+  color:white;
   background: #FFD3AC;
   width:30%;
 }
@@ -68,5 +71,3 @@ md-content {
   right: 40px;
 }
 
-.md-input {
-  padding-right : 2px!important;
