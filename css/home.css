@@ -2,6 +2,13 @@
   padding-top:40px;
   padding-left:40px;
 }
+.md-track {
+  background:white!important;
+}
+.md-thumb:after {
+  background-color:white!important;
+  border-color:white!important;
+}
 
 @font-face {
   font-family: 'CircularStd Bold';

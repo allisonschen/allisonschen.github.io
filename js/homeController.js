@@ -40,28 +40,28 @@
       console.log("removing");
     }
     vm.attrs = [{
-      "name": "danceability",
+      "name": "Dance",
       "val": 0.0
     },{
-      "name" : "acousticness",
+      "name" : "Akewstic",
       "val": 0.0
     },{
-      "name" : "instrumentalness",
+      "name" : "Instrooment",
       "val": 0
     },{
-      "name": "loudness",
+      "name": "Loud",
       "val" : 0,
     },{
-      "name" : "energy",
+      "name" : "Energy",
       "val": 0 
     },{ 
-      "name" : "popularity",
+      "name" : "Popular",
       "val" : 0
     },{
-      "name" : "speechiness",
+      "name" : "Vocal",
       "val" : 0 
     },{
-      "name" :"valence",
+      "name" :"Happy",
       "val" : 0
     }];
     vm.finalj.attrs=vm.attrs;
