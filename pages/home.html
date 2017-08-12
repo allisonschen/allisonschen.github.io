@@ -24,7 +24,7 @@
       <input type="text">
     </md-input-container>
     <md-content layout="row" layout-padding>
-    <md-slider-container flex  ng-repeat="attr in homeVm.attrs">
+    <md-slider-container flex  ng-repeat="attr in homeVm.attrs" ng-if="$odd">
       <md-slider ng-disabled="homeVm.isDisabled" md-vertical ng-model="attr.val" class="md-primary" aria-label="lmao" md-range min="0" max = "100">
       </md-slider>
       <span ng-click="homeVm.isDisabled = !homeVm.isDisabled">{{attr.name}}</span>

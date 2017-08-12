@@ -49,9 +49,6 @@
       "name" : "instrumentalness",
       "val": 0
     },{
-      "name" : "liveness",
-      "val" : 0
-    },{
       "name": "loudness",
       "val" : 0,
     },{
