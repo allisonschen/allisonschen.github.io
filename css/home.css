@@ -31,7 +31,10 @@
 #controlPanel > md-content {
   background: #FFD3AC;
 }
-
+#controlPanel > md-content > span {
+  font-weight: 800;
+  color:white;
+}
 h3 {
   font-family: 'CircularStd-Bold';
 }
