@@ -24,8 +24,8 @@
 h3 {
   font-family: 'CircularStd-Bold';
 }
-
 md-content {
+  background:inherit;
 }
 
 .artistImg {

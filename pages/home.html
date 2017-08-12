@@ -29,12 +29,13 @@
       </md-slider>
       <span ng-click="homeVm.isDisabled = !homeVm.isDisabled">{{attr.name}}</span>
     </md-slider-container>
+    </md-content>
+    <md-content layout="row" layout-padding>
     <md-slider-container flex  ng-repeat="attr in homeVm.attrs" ng-if="$even">
       <md-slider ng-disabled="homeVm.isDisabled" md-vertical ng-model="attr.val" class="md-primary" aria-label="lmao" md-range min="0" max = "100">
       </md-slider>
       <span ng-click="homeVm.isDisabled = !homeVm.isDisabled">{{attr.name}}</span>
     </md-slider-container>
-    
     </md-content>
   </md-content>
   <input type="text" ng-model="homeVm.artistSearch" placeholder="type artist to search" typeahead-template-url="dropTemplate.html" uib-typeahead="artist as artist.name for artist in homeVm.search($viewValue)" typeahead-focus-first="true" typeahead-on-select="homeVm.onSelect($item,$model,$label)">
