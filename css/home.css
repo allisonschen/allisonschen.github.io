@@ -28,6 +28,10 @@
   width: 200px;
 }
 
+#controlPanel > md-content {
+  background: #FFD3AC;
+}
+
 h3 {
   font-family: 'CircularStd-Bold';
 }
