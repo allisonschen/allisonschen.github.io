@@ -26,7 +26,7 @@
 #controlPanel {
   color:white;
   background: #FFD3AC;
-  width:30%;
+  width:45%;
 }
 #controlPanel > md-input-container {
   width: 200px;
