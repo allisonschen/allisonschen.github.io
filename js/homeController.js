@@ -33,7 +33,27 @@
 	params: vm.finalj
       }).then(function(response) {
 	console.log(response);
+	vm.username = "";
+	$http.get("https://api.spotify.com/v1/me", {
+	  headers: {
+	    Authorization : auth
+	  }
+	}).then(function(response) {
+	  vm.username = response.data.uri
+	});
+        $http.post("https://api.spotify.com/v1/users/{{vm.username}}/playlists", {
+	  headers: {
+	    Authorization: auth,
+	    Content-Type: "application/json"
+	  },
+	  params: {
+	    name: "Wreck-it-Ralph"
+	  }
+	}).then(function(response) {
+	  console.log(response);
+	});
 	angular.forEach(response.data.tracks, function(item) {
+
 	  console.log(item.uri);
 	});
       });
