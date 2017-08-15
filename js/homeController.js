@@ -32,11 +32,9 @@
 	},
 	params: vm.finalj
       }).then(function(response) {
-	$http.post("https://api.spotify.com/v1/users/", {
-	  console.log(response);
-	  angular.forEach(response.data.tracks, function(item) {
-	    console.log(item.uri);
-	  });
+	console.log(response);
+	angular.forEach(response.data.tracks, function(item) {
+	  console.log(item.uri);
 	});
       });
     }
