@@ -55,10 +55,24 @@
 	  }
 	}).then(function(response) {
 	  console.log(response);
+	  pid = response.data.id;
 	});
+	var urilist = "uris=";
 	angular.forEach(response.data.tracks, function(item) {
 
-	  console.log(item.uri);
+	  urilist.concat(item.uri + ',');
+	});
+	urilist = urilist.slice(0,-1);
+	$http({
+	  method: 'POST',
+	  url: uarel + "/" + pid + "/tracks",
+	  headers: {
+	    'Authorization': auth,
+	    "Content-Type" : "application/json"
+	  },
+	  data: {
+	    uris: urilist,
+	  }
 	});
       });
     }
