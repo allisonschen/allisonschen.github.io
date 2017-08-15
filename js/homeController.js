@@ -50,7 +50,7 @@
 	    Authorization: auth,
 	    'Content-Type': "application/json"
 	  },
-	  params: {
+	  data: {
 	    name: "Wreck-it-Ralph"
 	  }
 	}).then(function(response) {
