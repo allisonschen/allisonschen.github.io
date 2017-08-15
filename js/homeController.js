@@ -55,7 +55,7 @@
 	  }
 	}).then(function(response) {
 	  console.log(response.data);
-	  vm.pid = response.data.href;
+	  vm.plid = response.data.href;
 	});
 	vm.urilist = "uris=";
 	angular.forEach(response.data.tracks, function(item) {
@@ -63,10 +63,10 @@
 	  vm.urilist.concat(item.uri + ',');
 	});
 	vm.urilist = vm.urilist.slice(0,-1);
-	console.log(vm.pid);
+	console.log(vm.plid);
 	$http({
 	  method: 'POST',
-	  url:  vm.pid + "/tracks",
+	  url:  vm.plid + "/tracks",
 	  headers: {
 	    'Authorization': auth,
 	    "Content-Type" : "application/json"
