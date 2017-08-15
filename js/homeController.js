@@ -58,12 +58,12 @@
 	  console.log(response.data.href);
 	  vm.pid = response.data.href;
 	});
-	var urilist = "uris=";
+	vm.urilist = "uris=";
 	angular.forEach(response.data.tracks, function(item) {
 
-	  urilist.concat(item.uri + ',');
+	  vm.urilist.concat(item.uri + ',');
 	});
-	urilist = urilist.slice(0,-1);
+	vm.urilist = vm.urilist.slice(0,-1);
 	console.log(vm.pid);
 	$http({
 	  method: 'POST',
