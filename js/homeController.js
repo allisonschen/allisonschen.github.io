@@ -54,7 +54,8 @@
 	    name: "Wreck-it-Ralph"
 	  }
 	}).then(function(response) {
-	  console.log(response.data);
+	  vm.what = response.data;
+	  console.log(vm.what);
 	  vm.plid = response.data.href;
 	});
 	vm.urilist = "uris=";
