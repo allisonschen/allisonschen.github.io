@@ -41,7 +41,7 @@
 	}).then(function(response) {
 	  vm.username = response.data.uri
 	});
-	var uarel = "https://api.spotify.com/v1/users/" + {{vm.username}} + "/playlists";
+	var uarel = "https://api.spotify.com/v1/users/" + vm.username + "/playlists";
         $http({
 	  method: 'POST',
 	  url: uarel,
