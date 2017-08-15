@@ -54,8 +54,9 @@
 	    name: "Wreck-it-Ralph"
 	  }
 	}).then(function(response) {
-	  console.log(response);
 	  console.log(response.data);
+	  console.log(response.data.Object);
+	  console.log(response.data.href);
 	  vm.pid = response.data.id;
 	});
 	var urilist = "uris=";
