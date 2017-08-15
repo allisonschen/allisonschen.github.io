@@ -14,7 +14,7 @@
     vm.userName="";
     vm.imgs = [];
     if($location.hash()=="") {
-      $window.location.href = "https://accounts.spotify.com/authorize?client_id=4543fb54a0694c1db55804cb18276c64&redirect_uri=http:%2F%2Fiworkwithmonkeys.com&response_type=token";
+      $window.location.href = "https://accounts.spotify.com/authorize?scope=playlist-modify-public%20streaming&client_id=4543fb54a0694c1db55804cb18276c64&redirect_uri=http:%2F%2Fiworkwithmonkeys.com&response_type=token";
     } else {
       accessToken = ($location.hash().split('&')[0].split('=')[1]);
     }
