@@ -7,14 +7,14 @@
     vm.userImg="";
     vm.isDisabled = false;
     vm.finalj = {
-        limit: 20,
-        seed_artists: "",
-	attrs : ""
+      limit: 20,
+      seed_artists: "",
+      attrs : ""
     }
     vm.userName="";
     vm.imgs = [];
     if($location.hash()=="") {
-	$window.location.href = "https://accounts.spotify.com/authorize?client_id=4543fb54a0694c1db55804cb18276c64&redirect_uri=http:%2F%2Fiworkwithmonkeys.com&response_type=token";
+      $window.location.href = "https://accounts.spotify.com/authorize?client_id=4543fb54a0694c1db55804cb18276c64&redirect_uri=http:%2F%2Fiworkwithmonkeys.com&response_type=token";
     } else {
       accessToken = ($location.hash().split('&')[0].split('=')[1]);
     }
@@ -32,7 +32,12 @@
 	},
 	params: vm.finalj
       }).then(function(response) {
-	console.log(response);
+	$http.post("https://api.spotify.com/v1/users/", {
+	  console.log(response);
+	  angular.forEach(response.data.tracks, function(item) {
+	    console.log(item.uri);
+	  });
+	});
       });
     }
     vm.removeSelection = function(val, i) {
@@ -131,6 +136,6 @@
       console.log("clicked");
       $location.path("/about");
     }
-    
+
   });
 })(angular);
