@@ -41,7 +41,7 @@
 	}).then(function(response) {
 	  vm.username = response.data.uri
 	});
-        $http.post("https://api.spotify.com/v1/users/{{vm.username}}/playlists", {
+        $http.post("https://api.spotify.com/v1/users/"+{{vm.username}} + "/playlists", {
 	  headers: {
 	    Authorization: auth,
 	    'Content-Type': "application/json"
