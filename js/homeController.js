@@ -57,6 +57,7 @@
 	  vm.what = response.data;
 	  console.log(vm.what);
 	  vm.plid = vm.what.href;
+	  console.log(vm.plid);
 	});
 	vm.urilist = "uris=";
 	angular.forEach(response.data.tracks, function(item) {
