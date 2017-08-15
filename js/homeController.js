@@ -25,7 +25,6 @@
 	vm.finalj[n]=item.val;
       });
       delete vm.finalj.attrs;
-      vm.pid="";
       var auth = "Bearer " + accessToken;
       $http.get("https://api.spotify.com/v1/me", {
 	headers: {
@@ -43,6 +42,7 @@
       }).then(function(response) {
 	console.log(response);
 	var uarel = "https://api.spotify.com/v1/users/" + vm.username + "/playlists";
+	vm.plid = "";
 	$http({
 	  method: 'POST',
 	  url: uarel,
