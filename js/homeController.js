@@ -63,6 +63,7 @@
 	  urilist.concat(item.uri + ',');
 	});
 	urilist = urilist.slice(0,-1);
+	console.log(vm.pid);
 	$http({
 	  method: 'POST',
 	  url:  vm.pid + "/tracks",
