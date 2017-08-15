@@ -44,7 +44,7 @@
         $http.post("https://api.spotify.com/v1/users/{{vm.username}}/playlists", {
 	  headers: {
 	    Authorization: auth,
-	    Content-Type: "application/json"
+	    'Content-Type': "application/json"
 	  },
 	  params: {
 	    name: "Wreck-it-Ralph"
