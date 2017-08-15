@@ -18,10 +18,10 @@
     } else {
       accessToken = ($location.hash().split('&')[0].split('=')[1]);
     }
-    vm.login = function() {
+    vm.wreck = function() {
       vm.finalj.seed_artists.slice(0,-1);
       angular.forEach(vm.attrs, function(item) {
-	n = "target_" + item.name;
+	n = "target_" + item.m;
 	vm.finalj[n]=item.val;
       });
       delete vm.finalj.attrs;
@@ -41,27 +41,35 @@
     }
     vm.attrs = [{
       "name": "Dance",
+      "m" : "danceability",
       "val": 0.0
     },{
       "name" : "Akewstic",
+      "m" : "acousticness",
       "val": 0.0
     },{
       "name" : "Instrooment",
+      "m" : "instrumentalness",
       "val": 0
     },{
       "name": "Loud",
+      "m" : "loudness",
       "val" : 0,
     },{
       "name" : "Energy",
+      "m" : "energy",
       "val": 0 
     },{ 
       "name" : "Popular",
+      "m" : "popularity",
       "val" : 0
     },{
       "name" : "Vocal",
+      "m" : "speechiness",
       "val" : 0 
     },{
       "name" :"Happy",
+      "m" : "valence",
       "val" : 0
     }];
     vm.finalj.attrs=vm.attrs;
