@@ -55,6 +55,7 @@
 	  }
 	}).then(function(response) {
 	  console.log(response);
+	  console.log(response.data);
 	  vm.pid = response.data.id;
 	});
 	var urilist = "uris=";
