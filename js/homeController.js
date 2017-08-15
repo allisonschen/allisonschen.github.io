@@ -65,7 +65,7 @@
 	urilist = urilist.slice(0,-1);
 	$http({
 	  method: 'POST',
-	  url: uarel + "/" + pid + "/tracks",
+	  url: uarel + "/" + vm.pid + "/tracks",
 	  headers: {
 	    'Authorization': auth,
 	    "Content-Type" : "application/json"
