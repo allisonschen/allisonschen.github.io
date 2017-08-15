@@ -55,7 +55,7 @@
 	  }
 	}).then(function(response) {
 	  console.log(response);
-	  pid = response.data.id;
+	  vm.pid = response.data.id;
 	});
 	var urilist = "uris=";
 	angular.forEach(response.data.tracks, function(item) {
