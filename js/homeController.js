@@ -32,7 +32,7 @@
 	  Authorization : auth
 	}
       }).then(function(response) {
-	console.log(response);
+	console.log(response.data);
 	vm.username = response.data.id
       });
       $http.get("https://api.spotify.com/v1/recommendations", {
@@ -42,7 +42,6 @@
 	params: vm.finalj
       }).then(function(response) {
 	console.log(response);
-	console.log("line 37");
 	var uarel = "https://api.spotify.com/v1/users/" + vm.username + "/playlists";
 	$http({
 	  method: 'POST',
@@ -55,7 +54,7 @@
 	    name: "Wreck-it-Ralph"
 	  }
 	}).then(function(response) {
-	  console.log(response.data.href);
+	  console.log(response.data);
 	  vm.pid = response.data.href;
 	});
 	vm.urilist = "uris=";
