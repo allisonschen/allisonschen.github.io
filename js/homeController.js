@@ -76,7 +76,7 @@
 	    }
 	  });
 	});
-      }
+      });
       vm.removeSelection = function(val, i) {
 	console.log(val,i);
 	console.log("removing");
