@@ -32,7 +32,7 @@
 	}
       }).then(function(response) {
 	console.log(response);
-	vm.username = response.data.uri
+	vm.username = response.data.id
       });
       $http.get("https://api.spotify.com/v1/recommendations", {
 	headers: {
