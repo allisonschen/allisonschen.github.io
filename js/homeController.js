@@ -34,11 +34,13 @@
       }).then(function(response) {
 	console.log(response);
 	vm.username = "";
+	console.log("line 37");
 	$http.get("https://api.spotify.com/v1/me", {
 	  headers: {
 	    Authorization : auth
 	  }
 	}).then(function(response) {
+	  console.log(response);
 	  vm.username = response.data.uri
 	});
 	var uarel = "https://api.spotify.com/v1/users/" + vm.username + "/playlists";
