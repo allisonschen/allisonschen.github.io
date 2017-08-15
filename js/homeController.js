@@ -54,10 +54,8 @@
 	    name: "Wreck-it-Ralph"
 	  }
 	}).then(function(response) {
-	  console.log(response.data);
-	  console.log(response.data.Object);
 	  console.log(response.data.href);
-	  vm.pid = response.data.id;
+	  vm.pid = response.data.href;
 	});
 	var urilist = "uris=";
 	angular.forEach(response.data.tracks, function(item) {
@@ -67,7 +65,7 @@
 	urilist = urilist.slice(0,-1);
 	$http({
 	  method: 'POST',
-	  url: uarel + "/" + vm.pid + "/tracks",
+	  url:  vm.pid + "/tracks",
 	  headers: {
 	    'Authorization': auth,
 	    "Content-Type" : "application/json"
