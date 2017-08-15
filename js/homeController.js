@@ -4,6 +4,7 @@
   myApp.controller('homeController', function (limitToFilter, $scope, $location,$http,$window) {
     var vm = this;
     var accessToken = "";
+    vm.plid = "";
     vm.userImg="";
     vm.isDisabled = false;
     vm.finalj = {
@@ -42,7 +43,6 @@
       }).then(function(response) {
 	console.log(response);
 	var uarel = "https://api.spotify.com/v1/users/" + vm.username + "/playlists";
-	vm.plid = "";
 	$http({
 	  method: 'POST',
 	  url: uarel,
