@@ -72,7 +72,7 @@
 	    "Content-Type" : "application/json"
 	  },
 	  data: {
-	    uris: urilist,
+	    uris: vm.urilist,
 	  }
 	});
       });
