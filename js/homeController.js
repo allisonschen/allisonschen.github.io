@@ -172,7 +172,7 @@
 	console.log(response);
       });
     }
-    vm.safetyurl = "https://open.spotify.com/embed?uri=spotify:user:" + homeVm.username + ":playlist:" + homeVm.playlistID;
+    vm.safetyurl = "https://open.spotify.com/embed?uri=spotify:user:" + vm.username + ":playlist:" + vm.playlistID;
     vm.safety = $sce.trustAsResourceUrl(vm.safety); 
     vm.changeView = function() {
       console.log("clicked");
