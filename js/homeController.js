@@ -41,6 +41,7 @@
 	},
 	params: vm.finalj
       }).then(function(response) {
+	vm.recresp = response.data;
 	console.log(response);
 	var uarel = "https://api.spotify.com/v1/users/" + vm.username + "/playlists";
 	$http({
@@ -58,7 +59,7 @@
 	  vm.plid = vm.what.href;
 
 	  vm.urilist = "uris=";
-	  angular.forEach(response.data.tracks, function(item) {
+	  angular.forEach(vm.recresp.tracks, function(item) {
 
 	    vm.urilist.concat(item.uri + ',');
 	  });
