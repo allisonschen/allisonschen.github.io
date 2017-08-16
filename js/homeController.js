@@ -75,6 +75,7 @@
 	    },
 	    params: {
 	     uris:  vm.urilist,
+	    }
 	  });
 	});
       });
