@@ -61,8 +61,8 @@
 	  vm.urilist = "uris=";
 	  console.log(vm.recresp);
 	  angular.forEach(vm.recresp.tracks, function(item) {
-
-	    vm.urilist.concat(item.uri + ',');
+	    console.log(item);
+	    vm.urilist+=(item.uri + ',');
 	  });
 	  vm.urilist = vm.urilist.slice(0,-1);
 	  console.log(vm.plid);
