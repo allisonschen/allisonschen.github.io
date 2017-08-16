@@ -58,7 +58,7 @@
 	  vm.what = response.data;
 	  vm.plid = vm.what.href;
 
-	  vm.urilist = "";
+	  vm.urilist = "uris=";
 	  console.log(vm.recresp);
 	  angular.forEach(vm.recresp.tracks, function(item) {
 	    console.log(item);
@@ -73,9 +73,7 @@
 	      'Authorization': auth,
 	      "Content-Type" : "application/json"
 	    },
-	    data: {
-	      uris: vm.urilist,
-	    }
+	    data: vm.urilist,
 	  });
 	});
       });
