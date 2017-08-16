@@ -57,7 +57,7 @@
 	}).then(function(response) {
 	  vm.what = response.data;
 	  vm.plid = vm.what.href;
-
+	  vm.playlistID = vm.what.id;
 	  vm.urilist = "";
 	  console.log(vm.recresp);
 	  angular.forEach(vm.recresp.tracks, function(item) {
