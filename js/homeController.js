@@ -59,6 +59,7 @@
 	  vm.plid = vm.what.href;
 
 	  vm.urilist = "uris=";
+	  console.log(vm.recresp);
 	  angular.forEach(vm.recresp.tracks, function(item) {
 
 	    vm.urilist.concat(item.uri + ',');
