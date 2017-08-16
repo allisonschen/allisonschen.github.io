@@ -1,7 +1,7 @@
 (function (angular) {
 
   var myApp = angular.module('myApp');
-  myApp.controller('homeController', function (limitToFilter, $scope, $location,$http,$window) {
+  myApp.controller('homeController', function (limitToFilter, $scope, $location,$http,$window, $sce) {
     var vm = this;
     var accessToken = "";
     vm.plid = "";
