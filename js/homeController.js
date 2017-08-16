@@ -60,6 +60,7 @@
 	  vm.playlistID = vm.what.id;
 	  vm.urilist = "";
     	  vm.safetyurl = "https://open.spotify.com/embed?uri=spotify:user:" + vm.username + ":playlist:" + vm.playlistID;
+	  console.log(vm.safetyurl);
     	  vm.safety = $sce.trustAsResourceUrl(vm.safety); 
 	  console.log(vm.safety);
 	  console.log(vm.recresp);
