@@ -59,6 +59,9 @@
 	  vm.plid = vm.what.href;
 	  vm.playlistID = vm.what.id;
 	  vm.urilist = "";
+    	  vm.safetyurl = "https://open.spotify.com/embed?uri=spotify:user:" + vm.username + ":playlist:" + vm.playlistID;
+    	  vm.safety = $sce.trustAsResourceUrl(vm.safety); 
+	  console.log(vm.safety);
 	  console.log(vm.recresp);
 	  angular.forEach(vm.recresp.tracks, function(item) {
 	    console.log(item);
@@ -172,8 +175,6 @@
 	console.log(response);
       });
     }
-    vm.safetyurl = "https://open.spotify.com/embed?uri=spotify:user:" + vm.username + ":playlist:" + vm.playlistID;
-    vm.safety = $sce.trustAsResourceUrl(vm.safety); 
     vm.changeView = function() {
       console.log("clicked");
       $location.path("/about");
