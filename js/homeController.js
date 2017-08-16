@@ -58,7 +58,7 @@
 	  vm.what = response.data;
 	  vm.plid = vm.what.href;
 
-	  vm.urilist = "uris=";
+	  vm.urilist = "";
 	  console.log(vm.recresp);
 	  angular.forEach(vm.recresp.tracks, function(item) {
 	    console.log(item);
