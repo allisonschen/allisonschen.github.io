@@ -21,7 +21,7 @@
     .when('/video', {
       templateUrl: 'pages/video.html',
       controller: 'videoController',
-      controllerAs 'videoVm'
+      controllerAs: 'videoVm'
     })
     .otherwise({
       templateUrl: 'pages/home.html',
