@@ -141,11 +141,10 @@
       }
     }).then(function(response){
       console.log(response);
-      console.log($location.hash());
-      console.log($location.hash().split('/[&=]/')[2])
-      console.log('user authenticated');
+      console.log("this authentication was a success");
     },function error(response) {
       console.log(response);
+      console.log("this authentication was a failure");
     });
     vm.search = function(val)  {
       console.log(val);
@@ -171,7 +170,7 @@
 	  i != null ?  item.img=i.url  :  item.img="./images/DefaultArtist.png";
 	  return vm.results.push(item);
 	})
-	,5);
+	,6);
       },function error(response) {
 	console.log(response);
       });

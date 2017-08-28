@@ -18,6 +18,11 @@
       controller: 'aboutController',
       controllerAs: 'aboutVm'
     })
+    .when('/video', {
+      templateUrl: 'pages/video.html',
+      controller: 'videoController',
+      controllerAs 'videoVm'
+    })
     .otherwise({
       templateUrl: 'pages/home.html',
       controller: 'homeController',
