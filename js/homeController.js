@@ -26,8 +26,7 @@
 	vm.finalj[n]=item.val;
       });
       delete vm.finalj.attrs;
-      var auth = "Bearer " + accessToken;
-      $http.get("https://api.spotify.com/v1/me", {
+/    $http.get("https://api.spotify.com/v1/me", {
 	headers: {
 	  Authorization : auth
 	}
